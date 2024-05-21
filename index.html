@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codezardi</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.3.8/build/spline-viewer.js"></script>
+    
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                logo
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        sobre mi
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        portafolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        blog
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        contacto
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="title__frontend">
+            <h1 class="frontend__developer">Fullstack developer</h1>
+            <h2 class="codezardi">codezardi</h2>
+            <p>¡Puedo convertir cualquier diseño que imagines en una maqueta funcional y visualmente atractiva!</p>
+        </div>
+        <spline-viewer class="planet__sphere" url="https://prod.spline.design/o0dcO-XK44W1SZ3d/scene.splinecode">
+        </spline-viewer>
+        <canvas id="canvas"></canvas>
+    </header>
+    <main>
+        <section class="main">
+            <article class="content">
+                <!-- Experience -->
+                <section class="experience">
+                    <img src="./assets/img/1.png" alt="Rock" class="rock">
+                    <div class="radial__bg"></div>
+
+                    <h2 class="title__section">Experiencia laboral</h2>
+                    <article class="timeline">
+                        <time>Junio 2020</time>
+                        <div class="subtitle__section">Freelancer Workana</div>
+                        <p>En esta plataforma me dedicaba a completar proyectos según los requerimientos de los
+                            clientes, entre ellos estaban creaciones de calculadoras sencillas, cálculos de comisiones
+                            en PayPal, pixel perfecto, PSD to HTML, Responsive Design, entre otros.
+                        </p>
+                    </article>
+                    <article class="timeline">
+                        <time>Enero 2023</time>
+                        <div class="subtitle__section">Maquetador Web</div>
+                        <p>Al maquetar todas las interfaces de usuario que añadían a
+                            mi espacio de trabajo, por las exigencias de algunos clientes no se requería usar ningún
+                            framework para el desarrollo del proyecto. Todo debía ser netamente puro. Esto a su vez me
+                            ayudó a profundizar y afirmar los conocimientos en HTML, CSS, SCSS y JavaScript.</p>
+                    </article>
+                    <article class="timeline">
+                        <time>Octubre 2023 - Actualidad</time>
+                        <div class="subtitle__section">Fullstack Developer</div>
+                        <p>Como Fullstack se desarrolló un clon de <strong>Codepen</strong> usando PHP Puro bajo una
+                            arquitectura MVC con el gestor de base de datos MySql. Actualmente sigo aprendiendo PHP
+                            usando el Framework <strong>Laravel.</strong></p>
+                    </article>
+                </section>
+                <!-- Projects -->
+                <section class="projects">
+                    <h2 class="title__section">Proyectos</h2>
+                    
+                    <div class="projects__cards">
+                        <article class="projects__card">
+                            <img src="./assets/img/project1.jpg" alt="UI Kit Loen" class="projects__img">
+                            <div class="projects__overlay">
+                                <h4 class="projects__title">Lorem, ipsum dolor.</h4>
+                                <p class="projects__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, illo?</p>
+                                <div class="tags">
+                                    <span class="tags-tag">html</span>
+                                    <span class="tags-tag">css</span>
+                                    <span class="tags-tag">javascript</span>
+                                </div>
+                                <a href="#" class="btn btn--secondary">
+                                    Ver proyecto
+                                </a>
+                            </div>
+                        </article>
+                        <article class="projects__card">
+                            <img src="./assets/img/project1.jpg" alt="Campament" class="projects__img">
+                            <div class="projects__overlay">
+                                <h4 class="projects__title">Lorem, ipsum dolor.</h4>
+                                <p class="projects__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, officia.</p>
+                                <div class="tags">
+                                    <span class="tags-tag">html</span>
+                                    <span class="tags-tag">css</span>
+                                    <span class="tags-tag">javascript</span>
+                                </div>
+                                <a href="#" class="btn btn--secondary">
+                                    Ver proyecto
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <!-- About me -->
+                <section class="about__me">
+                    <h2 class="title__section title__section--sp">Sobre mi</h2>
+                    <article class="about__me-paragraphs">
+                        <p>¡Hola! Soy un </p>
+                    </article>
+
+                    <article class="about__me-name">
+                        <div class="letter augusto">augusto</div>
+                        <div class="letter diaz">díaz</div>
+                        <img src="assets/img/base.svg" alt="BaseBox" class="base__box">
+                    </article>
+                    <img src="assets/img/rocks.png" alt="Rocks" class="rocks">
+                </section>
+                <!-- Section -->
+                <section class="skills">
+                    <h2 class="title__section">Skills</h2>
+                </section>
+            </article>
+        </section>
+    </main>
+
+
+
+    <img src="assets/img/cursor.svg" class="cursor" alt="Cursor">
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
