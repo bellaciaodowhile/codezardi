@@ -79,7 +79,9 @@ header {
         text-transform: uppercase;
         font-weight: normal;
         z-index: 3;
-
+        @media (max-width: 590px) {
+            display: none;
+        }
         .logo {
             padding: 1em;
         }
@@ -109,6 +111,9 @@ header {
 // * Helpers
 .container {
     padding: 0 7rem;
+    @media (max-width: 590px) {
+        padding: 0 2rem;
+    }
 }
 
 .planet {
@@ -174,7 +179,9 @@ header {
         text-transform: uppercase;
         font-size: 7rem;
         color: $color-title;
-
+        @media (max-width: 830px) {
+            font-size: 3rem;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -183,6 +190,9 @@ header {
             bottom: 30px;
             left: 0;
             background: $color-title;
+            @media (max-width: 830px) {
+                background: #0000;
+            }
         }
     }
 
@@ -192,6 +202,9 @@ header {
         text-align: center;
         max-width: 70ch;
         margin-top: -23px;
+        @media (max-width: 830px) {
+            margin-top: 0;
+        }
     }
 }
 
@@ -201,7 +214,9 @@ header {
     background: -webkit-linear-gradient(222deg, #ffffff, #8068ec);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    @media (max-width: 590px) {
+        font-size: 2rem;
+    }
     &--sp {
         margin-top: 2em;
     }
@@ -212,6 +227,9 @@ header {
     color: $subtitle-section;
     font-weight: bold;
     text-align: left;
+    @media (max-width: 590px) {
+        font-size: 1.2rem;
+    }
 }
 
 .cursor {
@@ -454,6 +472,9 @@ main {
             display: flex;
             // flex-wrap: wrap;
             gap: 2rem;
+            @media (max-width: 990px) {
+                flex-direction: column;
+            }
         }
 
         &__card {
@@ -464,7 +485,9 @@ main {
             display: flex;
             gap: 1rem;
             max-width: 50vw;
-
+            @media (max-width: 990px) {
+                max-width: 100vw;
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -497,7 +520,6 @@ main {
         &__description {}
 
         &__img {
-            width: 50vw;
             border-radius: 10px;
             object-fit: cover;
             object-position: left top;
@@ -515,6 +537,9 @@ main {
             flex-direction: column;
             justify-content: flex-end;
             transition: $trs;
+            @media (max-width: 590px) {
+                display: none;
+            }
         }
     }
 

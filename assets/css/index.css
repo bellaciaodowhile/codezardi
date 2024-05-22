@@ -63,6 +63,11 @@ header nav {
   font-weight: normal;
   z-index: 3;
 }
+@media (max-width: 590px) {
+  header nav {
+    display: none;
+  }
+}
 header nav .logo {
   padding: 1em;
 }
@@ -83,6 +88,11 @@ header nav ul li a:hover {
 
 .container, main .skills, main .projects, main .about__me-paragraphs, main .about__me .title__section, main .experience {
   padding: 0 7rem;
+}
+@media (max-width: 590px) {
+  .container, main .skills, main .projects, main .about__me-paragraphs, main .about__me .title__section, main .experience {
+    padding: 0 2rem;
+  }
 }
 
 .planet {
@@ -142,6 +152,11 @@ header nav ul li a:hover {
   font-size: 7rem;
   color: #F1ECFF;
 }
+@media (max-width: 830px) {
+  .title__frontend .codezardi {
+    font-size: 3rem;
+  }
+}
 .title__frontend .codezardi::before {
   content: "";
   position: absolute;
@@ -151,12 +166,22 @@ header nav ul li a:hover {
   left: 0;
   background: #F1ECFF;
 }
+@media (max-width: 830px) {
+  .title__frontend .codezardi::before {
+    background: rgba(0, 0, 0, 0);
+  }
+}
 .title__frontend p {
   font-weight: 200;
   text-wrap: inherit;
   text-align: center;
   max-width: 70ch;
   margin-top: -23px;
+}
+@media (max-width: 830px) {
+  .title__frontend p {
+    margin-top: 0;
+  }
 }
 
 .title__section {
@@ -165,6 +190,11 @@ header nav ul li a:hover {
   background: -webkit-linear-gradient(222deg, #ffffff, #8068ec);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (max-width: 590px) {
+  .title__section {
+    font-size: 2rem;
+  }
 }
 .title__section--sp {
   margin-top: 2em;
@@ -175,6 +205,11 @@ header nav ul li a:hover {
   color: #d8d2f4;
   font-weight: bold;
   text-align: left;
+}
+@media (max-width: 590px) {
+  .subtitle__section {
+    font-size: 1.2rem;
+  }
 }
 
 .cursor {
@@ -326,6 +361,11 @@ main .projects__cards {
   display: flex;
   gap: 2rem;
 }
+@media (max-width: 990px) {
+  main .projects__cards {
+    flex-direction: column;
+  }
+}
 main .projects__card {
   position: relative;
   width: 100%;
@@ -334,6 +374,11 @@ main .projects__card {
   display: flex;
   gap: 1rem;
   max-width: 50vw;
+}
+@media (max-width: 990px) {
+  main .projects__card {
+    max-width: 100vw;
+  }
 }
 main .projects__card::before {
   content: "";
@@ -358,7 +403,6 @@ main .projects__title {
   margin-bottom: 1rem;
 }
 main .projects__img {
-  width: 50vw;
   border-radius: 10px;
   object-fit: cover;
   object-position: left top;
@@ -375,6 +419,11 @@ main .projects__overlay {
   flex-direction: column;
   justify-content: flex-end;
   transition: all 300ms ease-in-out;
+}
+@media (max-width: 590px) {
+  main .projects__overlay {
+    display: none;
+  }
 }
 .tags {
   display: flex;
