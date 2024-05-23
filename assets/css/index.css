@@ -319,16 +319,18 @@ main .about__me {
 }
 main .about__me .title__section {
   position: inherit;
-  text-align: center;
   z-index: 1;
 }
 main .about__me-paragraphs {
-  display: flex;
-  justify-content: center;
+  justify-content: start;
+  background: linear-gradient(to top, #080516, rgba(0, 0, 0, 0));
+  max-width: 750px;
+  color: #fff;
+  box-shadow: 108px 0 125px -165px #8064F1, -108px 0 125px -165px #8064F1;
 }
 main .about__me-paragraphs p {
-  text-align: center;
   z-index: 1;
+  color: #fff;
 }
 main .about__me-name {
   position: relative;
@@ -370,31 +372,37 @@ main .projects__card {
   position: relative;
   width: 100%;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0);
-  display: flex;
+  border: 1px solid #311d55;
+  padding: 1rem;
   gap: 1rem;
   max-width: 50vw;
+  transition: all 300ms ease-in-out;
+  background: linear-gradient(45deg, #11082f, rgba(0, 0, 0, 0));
 }
 @media (max-width: 990px) {
   main .projects__card {
     max-width: 100vw;
   }
 }
-main .projects__card::before {
-  content: "";
+main .projects__card i {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background: linear-gradient(30deg, #080516, rgba(8, 5, 22, 0.6509803922));
-  opacity: 0;
+  right: 1rem;
+  color: #9785eb;
   transition: all 300ms ease-in-out;
+  transition-delay: 100ms;
+  font-size: 1.2rem;
 }
-main .projects__card:hover::before {
-  opacity: 1;
+main .projects__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 80px -49px #8064f1, 0 43px 80px -50px #f164c3;
 }
-main .projects__card:hover .projects__overlay {
-  opacity: 1;
+main .projects__card:hover .projects__img {
+  width: 150% !important;
+  object-position: top right;
+}
+main .projects__card:hover i {
+  transform: translate(3px, -3px);
+  color: #d8d2f4;
 }
 main .projects__title {
   font-weight: 600;
@@ -406,24 +414,6 @@ main .projects__img {
   border-radius: 10px;
   object-fit: cover;
   object-position: left top;
-}
-main .projects__overlay {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  padding: 1rem 2rem;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  transition: all 300ms ease-in-out;
-}
-@media (max-width: 590px) {
-  main .projects__overlay {
-    display: none;
-  }
 }
 .tags {
   display: flex;
