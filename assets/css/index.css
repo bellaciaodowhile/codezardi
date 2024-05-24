@@ -536,7 +536,7 @@ main .about__me .block:nth-child(5) {
 }
 @media (max-width: 720px) {
   main .about__me .block {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 main .about__me-name {
