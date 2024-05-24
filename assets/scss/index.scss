@@ -32,7 +32,7 @@ $color-gray: #777777;
 $trs: all 300ms ease-in-out;
 $color-title: #F1ECFF;
 $subtitle-section: #d8d2f4;
-
+$trs-five: 400ms;
 body {
     position: relative;
     font-size: 14px;
@@ -79,9 +79,11 @@ header {
         text-transform: uppercase;
         font-weight: normal;
         z-index: 3;
+
         @media (max-width: 590px) {
             display: none;
         }
+
         .logo {
             padding: 1em;
         }
@@ -111,6 +113,7 @@ header {
 // * Helpers
 .container {
     padding: 0 7rem;
+
     @media (max-width: 590px) {
         padding: 0 2rem;
     }
@@ -179,9 +182,11 @@ header {
         text-transform: uppercase;
         font-size: 7rem;
         color: $color-title;
+
         @media (max-width: 830px) {
             font-size: 3rem;
         }
+
         &::before {
             content: "";
             position: absolute;
@@ -190,6 +195,7 @@ header {
             bottom: 30px;
             left: 0;
             background: $color-title;
+
             @media (max-width: 830px) {
                 background: #0000;
             }
@@ -202,6 +208,7 @@ header {
         text-align: center;
         max-width: 70ch;
         margin-top: -23px;
+
         @media (max-width: 830px) {
             margin-top: 0;
         }
@@ -214,9 +221,11 @@ header {
     background: -webkit-linear-gradient(222deg, #ffffff, #8068ec);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
     @media (max-width: 590px) {
         font-size: 2rem;
     }
+
     &--sp {
         margin-top: 2em;
     }
@@ -227,6 +236,7 @@ header {
     color: $subtitle-section;
     font-weight: bold;
     text-align: left;
+
     @media (max-width: 590px) {
         font-size: 1.2rem;
     }
@@ -356,12 +366,21 @@ main {
 
     .about__me {
         position: relative;
+        width: 100%;
 
         .title__section {
             @extend .container;
             position: inherit;
             // text-align: center;
             z-index: 1;
+        }
+
+        .img__aboutme {
+            position: inherit;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0 auto;
+            max-width: 1080px;
         }
 
         &-paragraphs {
@@ -374,6 +393,7 @@ main {
             color: #fff;
             // text-align: center;
             box-shadow: 108px 0 125px -165px #8064F1, -108px 0 125px -165px #8064F1;
+
             p {
                 // text-align: center;
                 z-index: 1;
@@ -482,6 +502,7 @@ main {
             display: flex;
             // flex-wrap: wrap;
             gap: 2rem;
+
             @media (max-width: 990px) {
                 flex-direction: column;
             }
@@ -496,12 +517,13 @@ main {
             // display: flex;
             gap: 1rem;
             max-width: 50vw;
-            transition: $trs;  
+            transition: $trs;
             background: linear-gradient(45deg, #11082f, #0000);
 
             @media (max-width: 990px) {
                 max-width: 100vw;
             }
+
             i {
                 position: absolute;
                 right: 1rem;
@@ -514,10 +536,12 @@ main {
             &:hover {
                 transform: translateY(-3px);
                 box-shadow: 0 20px 80px -49px #8064f1, 0 43px 80px -50px #f164c3;
+
                 .projects__img {
                     width: 150% !important;
                     object-position: top right;
                 }
+
                 i {
                     transform: translate(3px, -3px);
                     color: #d8d2f4;
@@ -553,7 +577,7 @@ main {
 .tags {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .7rem;
     margin-bottom: 1rem;
     pointer-events: none;
     user-select: none;
@@ -564,6 +588,11 @@ main {
         text-transform: uppercase;
         border: 1px solid $color-text;
         color: $color-text;
+
+        &--small {
+            font-size: .8rem;
+            padding: 3px 15px;
+        }
     }
 }
 
@@ -829,5 +858,169 @@ button {
 
     @media only screen and (min-device-width : 375px) and (max-device-width : 812px) {
         font-size: 2em;
+    }
+}
+
+.relative__aboutme {
+    position: relative;
+    .experience {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: white !important;
+        z-index: 3;
+        transform: translate(-50%, -78%);
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 100;
+        font-size: 1.3rem;
+        letter-spacing: 11px;
+    }
+    .svg__experience {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        #arrowTop, #topLine, #ellipseCenter, #arrowBottom, #arrowLeftTop, #arrowLeftBottom, #lineFront, #bottomLine, #lineLeft, #ellipseBorderCenter, #ellipseBorderBig, #ellipseBorderSmall, #arrowRight {
+            opacity: 0;
+        }
+        #ellipseCenter {
+            animation: 1s ellipseCenter ease-in-out forwards;
+        }
+        #arrowTop {
+            animation: $trs-five arrowInvertY ease-in-out forwards 600ms;
+        }
+        #arrowBottom {
+            animation: $trs-five arrowY ease-in-out forwards 800ms;
+        }
+        #arrowLeftTop {
+            animation: $trs-five arrowLeftTop ease-in-out forwards 900ms;
+        }
+        #arrowLeftBottom {
+            animation: $trs-five arrowLeftBottom ease-in-out forwards 1000ms;
+        }
+        #topLine {
+            animation: $trs-five arrowInvertX ease-in-out forwards 1100ms;
+        }
+        #lineFront {
+            animation: $trs-five arrowInvertY ease-in-out forwards 1200ms;
+        }
+        #bottomLine {
+            animation: $trs-five arrowX ease-in-out forwards 1300ms;
+        }
+        #lineLeft {
+            animation: $trs-five arrowInvertY ease-in-out forwards 1400ms;
+        }
+    
+        #ellipseBorderCenter  {
+            animation: 1.5s rotate3d ease-in-out forwards 700ms;
+        }
+        #ellipseBorderBig  {
+            animation: 1s skewX ease-in-out forwards 700ms;
+        }
+        #ellipseBorderSmall  {
+            animation: 500ms fadeIn ease-in-out forwards 1800ms;
+        }
+        #arrowRight {
+            animation: $trs-five arrowInvertX ease-in-out forwards 1600ms;
+        }
+    
+    
+    }
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+@keyframes skewX {
+    from {
+        transform: skewX(19deg);
+    }
+    to {
+        transform: skewX(0);
+        opacity: 1;
+    }
+}
+@keyframes rotate3d {
+    from {
+        transform: rotate3d(1, 1, 1, 102deg);
+    }
+    to {
+        transform: rotate3d(1, 1, 1, 0deg);
+        opacity: 1;
+    }
+}
+@keyframes arrowInvertY {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes arrowY {
+    from {
+        transform: translateY(50px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes arrowX {
+    from {
+        transform: translateX(50px);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes arrowInvertX {
+    from {
+        transform: translateX(-50px);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes arrowLeftTop {
+    from {
+        transform: translate(-50px, -50px);
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+@keyframes arrowLeftBottom {
+    from {
+        transform: translate(-50px, 50px);
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes ellipseCenter {
+    from {
+        transform: rotateX(90deg);
+    }
+
+    to {
+        transform: rotateX(0);
+        opacity: 1;
     }
 }

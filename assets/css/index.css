@@ -316,10 +316,18 @@ main .experience .sphere {
 }
 main .about__me {
   position: relative;
+  width: 100%;
 }
 main .about__me .title__section {
   position: inherit;
   z-index: 1;
+}
+main .about__me .img__aboutme {
+  position: inherit;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  max-width: 1080px;
 }
 main .about__me-paragraphs {
   justify-content: start;
@@ -418,7 +426,7 @@ main .projects__img {
 .tags {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.7rem;
   margin-bottom: 1rem;
   pointer-events: none;
   user-select: none;
@@ -429,6 +437,10 @@ main .projects__img {
   text-transform: uppercase;
   border: 1px solid #d8d8d8;
   color: #d8d8d8;
+}
+.tags-tag--small {
+  font-size: 0.8rem;
+  padding: 3px 15px;
 }
 
 article.timeline {
@@ -604,6 +616,161 @@ button {
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
   button {
     font-size: 2em;
+  }
+}
+
+.relative__aboutme {
+  position: relative;
+}
+.relative__aboutme .experience {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: white !important;
+  z-index: 3;
+  transform: translate(-50%, -78%);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.3rem;
+  letter-spacing: 11px;
+}
+.relative__aboutme .svg__experience {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.relative__aboutme .svg__experience #arrowTop, .relative__aboutme .svg__experience #topLine, .relative__aboutme .svg__experience #ellipseCenter, .relative__aboutme .svg__experience #arrowBottom, .relative__aboutme .svg__experience #arrowLeftTop, .relative__aboutme .svg__experience #arrowLeftBottom, .relative__aboutme .svg__experience #lineFront, .relative__aboutme .svg__experience #bottomLine, .relative__aboutme .svg__experience #lineLeft, .relative__aboutme .svg__experience #ellipseBorderCenter, .relative__aboutme .svg__experience #ellipseBorderBig, .relative__aboutme .svg__experience #ellipseBorderSmall, .relative__aboutme .svg__experience #arrowRight {
+  opacity: 0;
+}
+.relative__aboutme .svg__experience #ellipseCenter {
+  animation: 1s ellipseCenter ease-in-out forwards;
+}
+.relative__aboutme .svg__experience #arrowTop {
+  animation: 400ms arrowInvertY ease-in-out forwards 600ms;
+}
+.relative__aboutme .svg__experience #arrowBottom {
+  animation: 400ms arrowY ease-in-out forwards 800ms;
+}
+.relative__aboutme .svg__experience #arrowLeftTop {
+  animation: 400ms arrowLeftTop ease-in-out forwards 900ms;
+}
+.relative__aboutme .svg__experience #arrowLeftBottom {
+  animation: 400ms arrowLeftBottom ease-in-out forwards 1000ms;
+}
+.relative__aboutme .svg__experience #topLine {
+  animation: 400ms arrowInvertX ease-in-out forwards 1100ms;
+}
+.relative__aboutme .svg__experience #lineFront {
+  animation: 400ms arrowInvertY ease-in-out forwards 1200ms;
+}
+.relative__aboutme .svg__experience #bottomLine {
+  animation: 400ms arrowX ease-in-out forwards 1300ms;
+}
+.relative__aboutme .svg__experience #lineLeft {
+  animation: 400ms arrowInvertY ease-in-out forwards 1400ms;
+}
+.relative__aboutme .svg__experience #ellipseBorderCenter {
+  animation: 1.5s rotate3d ease-in-out forwards 700ms;
+}
+.relative__aboutme .svg__experience #ellipseBorderBig {
+  animation: 1s skewX ease-in-out forwards 700ms;
+}
+.relative__aboutme .svg__experience #ellipseBorderSmall {
+  animation: 500ms fadeIn ease-in-out forwards 1800ms;
+}
+.relative__aboutme .svg__experience #arrowRight {
+  animation: 400ms arrowInvertX ease-in-out forwards 1600ms;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes skewX {
+  from {
+    transform: skewX(19deg);
+  }
+  to {
+    transform: skewX(0);
+    opacity: 1;
+  }
+}
+@keyframes rotate3d {
+  from {
+    transform: rotate3d(1, 1, 1, 102deg);
+  }
+  to {
+    transform: rotate3d(1, 1, 1, 0deg);
+    opacity: 1;
+  }
+}
+@keyframes arrowInvertY {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes arrowY {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes arrowX {
+  from {
+    transform: translateX(50px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes arrowInvertX {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes arrowLeftTop {
+  from {
+    transform: translate(-50px, -50px);
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes arrowLeftBottom {
+  from {
+    transform: translate(-50px, 50px);
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes ellipseCenter {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0);
+    opacity: 1;
   }
 }
 
