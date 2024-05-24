@@ -86,11 +86,11 @@ header nav ul li a:hover {
   transform: translateY(3px);
 }
 
-.container, main .skills, main .projects, main .about__me-paragraphs, main .about__me .title__section, main .experience {
+.container, main .skills, main .projects, main .about__me .title__section, main .experience {
   padding: 0 7rem;
 }
 @media (max-width: 590px) {
-  .container, main .skills, main .projects, main .about__me-paragraphs, main .about__me .title__section, main .experience {
+  .container, main .skills, main .projects, main .about__me .title__section, main .experience {
     padding: 0 2rem;
   }
 }
@@ -253,12 +253,12 @@ p {
 }
 
 .base__box {
-  position: absolute;
   top: 256px;
   left: 0;
   width: 100%;
   z-index: 1;
   pointer-events: none;
+  background: #080516;
 }
 
 .shadow__circle {
@@ -317,6 +317,13 @@ main .experience .sphere {
 main .about__me {
   position: relative;
   width: 100%;
+  color: #fff;
+}
+@media (max-width: 1000px) {
+  main .about__me {
+    display: flex;
+    flex-direction: column;
+  }
 }
 main .about__me .title__section {
   position: inherit;
@@ -329,16 +336,203 @@ main .about__me .img__aboutme {
   margin: 0 auto;
   max-width: 1080px;
 }
-main .about__me-paragraphs {
-  justify-content: start;
-  background: linear-gradient(to top, #080516, rgba(0, 0, 0, 0));
-  max-width: 750px;
-  color: #fff;
-  box-shadow: 108px 0 125px -165px #8064F1, -108px 0 125px -165px #8064F1;
+main .about__me .block {
+  position: absolute;
+  display: none;
+  max-width: 30ch;
+  font-size: 1.2rem;
+  transition: all 300ms ease-in-out;
 }
-main .about__me-paragraphs p {
-  z-index: 1;
-  color: #fff;
+main .about__me .block:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  top: 1px;
+  left: 23%;
+}
+main .about__me .block:nth-child(1) h4 {
+  margin-bottom: 6px;
+}
+@media (max-width: 1820px) {
+  main .about__me .block:nth-child(1) {
+    top: 1%;
+    right: auto;
+    bottom: auto;
+    left: 20%;
+  }
+}
+@media (max-width: 1350px) {
+  main .about__me .block:nth-child(1) {
+    top: 1%;
+    right: auto;
+    bottom: auto;
+    left: 16%;
+  }
+}
+@media (max-width: 1150px) {
+  main .about__me .block:nth-child(1) {
+    top: 1%;
+    right: auto;
+    bottom: auto;
+    left: 10%;
+  }
+}
+main .about__me .block:nth-child(2) {
+  display: flex;
+  top: 44%;
+  right: 9%;
+}
+@media (max-width: 1820px) {
+  main .about__me .block:nth-child(2) {
+    top: 44%;
+    right: 7%;
+    bottom: auto;
+    left: auto;
+  }
+}
+@media (max-width: 1616px) {
+  main .about__me .block:nth-child(2) {
+    top: 44%;
+    right: 2%;
+    bottom: auto;
+    left: auto;
+  }
+}
+@media (max-width: 1495px) {
+  main .about__me .block:nth-child(2) {
+    top: 65%;
+    right: 5%;
+    bottom: auto;
+    left: auto;
+  }
+}
+@media (max-width: 1350px) {
+  main .about__me .block:nth-child(2) {
+    top: 72%;
+    right: 3%;
+    bottom: auto;
+    left: auto;
+  }
+}
+@media (max-width: 1150px) {
+  main .about__me .block:nth-child(2) {
+    top: 78%;
+    right: 5%;
+    bottom: auto;
+    left: auto;
+    max-width: 25ch;
+  }
+}
+main .about__me .block:nth-child(3) {
+  display: flex;
+  top: 44%;
+  left: 20%;
+}
+@media (max-width: 1616px) {
+  main .about__me .block:nth-child(3) {
+    top: 44%;
+    right: auto;
+    bottom: auto;
+    left: 13%;
+  }
+}
+@media (max-width: 1350px) {
+  main .about__me .block:nth-child(3) {
+    top: 44%;
+    right: auto;
+    bottom: auto;
+    left: 8%;
+  }
+}
+@media (max-width: 1150px) {
+  main .about__me .block:nth-child(3) {
+    top: 47%;
+    right: auto;
+    bottom: auto;
+    left: 6%;
+  }
+}
+@media (max-width: 1000px) {
+  main .about__me .block:nth-child(3) {
+    text-align: center;
+    order: 1;
+  }
+}
+main .about__me .block:nth-child(4) {
+  display: flex;
+  top: 79%;
+  left: 31%;
+}
+@media (max-width: 1616px) {
+  main .about__me .block:nth-child(4) {
+    top: 79%;
+    right: auto;
+    bottom: auto;
+    left: 22%;
+  }
+}
+@media (max-width: 1350px) {
+  main .about__me .block:nth-child(4) {
+    top: 79%;
+    right: auto;
+    bottom: auto;
+    left: 17%;
+  }
+}
+@media (max-width: 1000px) {
+  main .about__me .block:nth-child(4) {
+    text-align: center;
+    order: 2;
+  }
+}
+main .about__me .block:nth-child(5) {
+  display: flex;
+  top: 17%;
+  right: 14%;
+}
+@media (max-width: 1616px) {
+  main .about__me .block:nth-child(5) {
+    top: 17%;
+    right: 7%;
+    bottom: auto;
+    left: auto;
+  }
+}
+@media (max-width: 1350px) {
+  main .about__me .block:nth-child(5) {
+    top: 21%;
+    right: 2%;
+    bottom: auto;
+    left: auto;
+  }
+}
+@media (max-width: 1150px) {
+  main .about__me .block:nth-child(5) {
+    top: 21%;
+    right: 0%;
+    bottom: auto;
+    left: auto;
+    max-width: 25ch;
+  }
+}
+@media (max-width: 1000px) {
+  main .about__me .block:nth-child(5) {
+    order: 3;
+    text-align: center;
+  }
+}
+@media (max-width: 1000px) {
+  main .about__me .block {
+    position: initial;
+    max-width: 100ch !important;
+  }
+  main .about__me .block--container {
+    padding: 0 7rem;
+  }
+}
+@media (max-width: 1000px) and (max-width: 590px) {
+  main .about__me .block--container {
+    padding: 0 2rem;
+  }
 }
 main .about__me-name {
   position: relative;
@@ -423,6 +617,16 @@ main .projects__img {
   object-fit: cover;
   object-position: left top;
 }
+main .skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .skills .subtitle__section {
+  margin-bottom: 2rem;
+}
+
 .tags {
   display: flex;
   align-items: center;
@@ -439,10 +643,58 @@ main .projects__img {
   color: #d8d8d8;
 }
 .tags-tag--small {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   padding: 3px 15px;
 }
 
+.scroll {
+  position: relative;
+  display: flex;
+  width: 70vw;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+.scroll div {
+  white-space: nowrap;
+  animation: scroll var(--time) linear infinite;
+  animation-delay: calc(var(--time) * -1);
+}
+.scroll div:nth-child(2) {
+  animation: scroll2 var(--time) linear infinite;
+  animation-delay: calc(var(--time) / -2);
+}
+.scroll div span {
+  display: inline-flex;
+  margin: 10px;
+  letter-spacing: 0.2em;
+  transition: 0.5s;
+  padding: 5px 20px;
+  border-radius: 200px;
+  text-transform: uppercase;
+  border: 1px solid #d8d8d8;
+  color: #d8d8d8;
+}
+.scroll div span:hover {
+  background: #3fd2f9;
+  cursor: pointer;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
 article.timeline {
   position: relative;
   padding-left: 2em;
@@ -621,12 +873,13 @@ button {
 
 .relative__aboutme {
   position: relative;
+  transition: all 300ms ease-in-out;
 }
-.relative__aboutme .experience {
+.relative__aboutme .experience__aboutme {
   position: absolute;
   left: 50%;
   top: 50%;
-  color: white !important;
+  color: white;
   z-index: 3;
   transform: translate(-50%, -78%);
   text-transform: uppercase;
@@ -634,62 +887,104 @@ button {
   font-weight: 100;
   font-size: 1.3rem;
   letter-spacing: 11px;
+  opacity: 0;
+}
+.relative__aboutme .experience__aboutme::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(#120b2f -87%, transparent);
+  border-radius: 50%;
+  left: 28%;
+  top: 9%;
+  z-index: -1;
 }
 .relative__aboutme .svg__experience {
   width: 100%;
+  height: 100%;
   max-width: 1000px;
   margin: 0 auto;
   position: inherit;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
-.relative__aboutme .svg__experience #arrowTop, .relative__aboutme .svg__experience #topLine, .relative__aboutme .svg__experience #ellipseCenter, .relative__aboutme .svg__experience #arrowBottom, .relative__aboutme .svg__experience #arrowLeftTop, .relative__aboutme .svg__experience #arrowLeftBottom, .relative__aboutme .svg__experience #lineFront, .relative__aboutme .svg__experience #bottomLine, .relative__aboutme .svg__experience #lineLeft, .relative__aboutme .svg__experience #ellipseBorderCenter, .relative__aboutme .svg__experience #ellipseBorderBig, .relative__aboutme .svg__experience #ellipseBorderSmall, .relative__aboutme .svg__experience #arrowRight {
+.relative__aboutme .svg__experience #arrowTop,
+.relative__aboutme .svg__experience #topLine,
+.relative__aboutme .svg__experience #ellipseCenter,
+.relative__aboutme .svg__experience #arrowBottom,
+.relative__aboutme .svg__experience #arrowLeftTop,
+.relative__aboutme .svg__experience #arrowLeftBottom,
+.relative__aboutme .svg__experience #lineFront,
+.relative__aboutme .svg__experience #bottomLine,
+.relative__aboutme .svg__experience #lineLeft,
+.relative__aboutme .svg__experience #ellipseBorderCenter,
+.relative__aboutme .svg__experience #ellipseBorderBig,
+.relative__aboutme .svg__experience #ellipseBorderSmall,
+.relative__aboutme .svg__experience #arrowRight {
   opacity: 0;
 }
-.relative__aboutme .svg__experience #ellipseCenter {
+@media (max-width: 1150px) {
+  .relative__aboutme .svg__experience {
+    transform: translateY(40px);
+  }
+}
+.relative__aboutme--active .svg__experience #ellipseCenter {
   animation: 1s ellipseCenter ease-in-out forwards;
 }
-.relative__aboutme .svg__experience #arrowTop {
+.relative__aboutme--active .svg__experience #arrowTop {
   animation: 400ms arrowInvertY ease-in-out forwards 600ms;
 }
-.relative__aboutme .svg__experience #arrowBottom {
+.relative__aboutme--active .svg__experience #arrowBottom {
   animation: 400ms arrowY ease-in-out forwards 800ms;
 }
-.relative__aboutme .svg__experience #arrowLeftTop {
+.relative__aboutme--active .svg__experience #arrowLeftTop {
   animation: 400ms arrowLeftTop ease-in-out forwards 900ms;
 }
-.relative__aboutme .svg__experience #arrowLeftBottom {
+.relative__aboutme--active .svg__experience #arrowLeftBottom {
   animation: 400ms arrowLeftBottom ease-in-out forwards 1000ms;
 }
-.relative__aboutme .svg__experience #topLine {
+.relative__aboutme--active .svg__experience #topLine {
   animation: 400ms arrowInvertX ease-in-out forwards 1100ms;
 }
-.relative__aboutme .svg__experience #lineFront {
+.relative__aboutme--active .svg__experience #lineFront {
   animation: 400ms arrowInvertY ease-in-out forwards 1200ms;
 }
-.relative__aboutme .svg__experience #bottomLine {
+.relative__aboutme--active .svg__experience #bottomLine {
   animation: 400ms arrowX ease-in-out forwards 1300ms;
 }
-.relative__aboutme .svg__experience #lineLeft {
+.relative__aboutme--active .svg__experience #lineLeft {
   animation: 400ms arrowInvertY ease-in-out forwards 1400ms;
 }
-.relative__aboutme .svg__experience #ellipseBorderCenter {
+.relative__aboutme--active .svg__experience #ellipseBorderCenter {
   animation: 1.5s rotate3d ease-in-out forwards 700ms;
 }
-.relative__aboutme .svg__experience #ellipseBorderBig {
+.relative__aboutme--active .svg__experience #ellipseBorderBig {
   animation: 1s skewX ease-in-out forwards 700ms;
 }
-.relative__aboutme .svg__experience #ellipseBorderSmall {
+.relative__aboutme--active .svg__experience #ellipseBorderSmall {
   animation: 500ms fadeIn ease-in-out forwards 1800ms;
 }
-.relative__aboutme .svg__experience #arrowRight {
+.relative__aboutme--active .svg__experience #arrowRight {
   animation: 400ms arrowInvertX ease-in-out forwards 1600ms;
+}
+.relative__aboutme--active .experience__aboutme {
+  animation: 1s fadeIn ease-in-out forwards 1900ms;
 }
 
 @keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+@keyframes expandCircle {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(5);
+    opacity: 1;
+    background: rgba(0, 0, 0, 0);
   }
 }
 @keyframes skewX {
