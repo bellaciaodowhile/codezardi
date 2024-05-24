@@ -823,14 +823,15 @@ main {
             display: inline-flex;
             margin: 10px;
             letter-spacing: 0.2em;
-            transition: 0.5s;
+            transition: $trs;
             padding: 5px 20px;
             border-radius: 200px;
             text-transform: uppercase;
             border: 1px solid $color-text;
             color: $color-text;
             &:hover {
-                background: #3fd2f9;
+                background: linear-gradient(45deg, #100d1d, #d81e608a);
+                border-color: #0000;
                 cursor: pointer;
             }
         }

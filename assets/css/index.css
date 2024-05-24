@@ -667,7 +667,7 @@ main .skills .subtitle__section {
   display: inline-flex;
   margin: 10px;
   letter-spacing: 0.2em;
-  transition: 0.5s;
+  transition: all 300ms ease-in-out;
   padding: 5px 20px;
   border-radius: 200px;
   text-transform: uppercase;
@@ -675,7 +675,8 @@ main .skills .subtitle__section {
   color: #d8d8d8;
 }
 .scroll div span:hover {
-  background: #3fd2f9;
+  background: linear-gradient(45deg, #100d1d, rgba(216, 30, 96, 0.5411764706));
+  border-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 
