@@ -534,6 +534,11 @@ main .about__me .block:nth-child(5) {
     padding: 0 2rem;
   }
 }
+@media (max-width: 720px) {
+  main .about__me .block {
+    font-size: 1rem;
+  }
+}
 main .about__me-name {
   position: relative;
   height: 885px;
@@ -625,6 +630,8 @@ main .skills {
 }
 main .skills .subtitle__section {
   margin-bottom: 2rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .tags {
