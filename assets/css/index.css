@@ -200,6 +200,7 @@ header nav.nav--active ul {
 @media (max-width: 620px) {
   .title__frontend .frontend__developer {
     font-size: 1rem;
+    letter-spacing: 3px;
   }
 }
 @media (max-width: 320px) {
@@ -227,12 +228,15 @@ header nav.nav--active ul {
 }
 @media (max-width: 440px) {
   .title__frontend .codezardi {
-    font-size: 3rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
   }
 }
 @media (max-width: 320px) {
   .title__frontend .codezardi {
-    font-size: 2.3rem;
+    font-size: 1rem;
+    margin-bottom: 0rem;
   }
 }
 .title__frontend .codezardi::before {
