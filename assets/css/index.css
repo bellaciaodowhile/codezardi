@@ -66,33 +66,23 @@ header nav {
   font-weight: normal;
   z-index: 5;
 }
-@media (max-width: 590px) {
+@media (max-width: 440px) {
   header nav {
-    display: none;
+    font-size: 0.6rem;
   }
-}
-header nav .logo {
-  padding: 1em;
 }
 header nav ul {
   display: flex;
   border-radius: 100px;
   transition: all 300ms ease-in-out;
 }
-@keyframes bg-spin {
-  to {
-    --border-angle: 1turn;
-  }
-}
-@property --border-angle {
-  header nav ul {
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0turn;
-  }
-}
 header nav ul li {
   padding: 1em;
+}
+@media (max-width: 440px) {
+  header nav ul li {
+    padding: 0.3rem;
+  }
 }
 header nav ul li a {
   display: block;
@@ -105,7 +95,8 @@ header nav ul li a.a--active {
   font-weight: 600;
 }
 header nav ul li a:hover {
-  transform: translateY(3px);
+  color: #ff3077;
+  font-weight: 600;
 }
 header nav.nav--active ul {
   background: rgba(8, 5, 22, 0.6784313725);
@@ -155,7 +146,7 @@ header nav.nav--active ul {
 .title__frontend {
   position: absolute;
   left: 0;
-  top: 27vh;
+  top: 22vh;
   z-index: 4;
   width: 100%;
   display: flex;
@@ -166,17 +157,30 @@ header nav.nav--active ul {
 .title__frontend .btns-social {
   display: flex;
   gap: 1rem;
-  margin: 1rem;
 }
 .title__frontend .btns-social a {
-  color: #ff3077;
+  color: #ffeef4;
   font-size: 0.875rem;
-  text-transform: uppercase;
-  border: 1px solid #ff3077;
-  border-radius: 4px;
+  border: 1px solid rgba(255, 48, 119, 0.3215686275);
+  border-radius: 100px;
   display: block;
-  padding: 10px;
-  font-weight: 600;
+  padding: 5px 10px;
+  font-weight: 400;
+  backdrop-filter: blur(10px);
+  background: rgba(184, 179, 183, 0.1411764706);
+  text-align: center;
+}
+.title__frontend .btns-social a:nth-child(1) {
+  background: #ff3077;
+  color: #fcfcff;
+}
+@media (max-width: 320px) {
+  .title__frontend .btns-social {
+    flex-direction: column;
+  }
+  .title__frontend .btns-social a {
+    width: 200px;
+  }
 }
 .title__frontend .frontend__developer {
   font-size: 2rem;
@@ -187,6 +191,23 @@ header nav.nav--active ul {
   text-align: center;
   margin-top: -31px;
 }
+@media (max-width: 830px) {
+  .title__frontend .frontend__developer {
+    margin-top: -18px;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 620px) {
+  .title__frontend .frontend__developer {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .title__frontend .frontend__developer {
+    margin-top: 0px;
+    font-size: 1rem;
+  }
+}
 .title__frontend .codezardi {
   position: relative;
   text-align: center;
@@ -196,7 +217,22 @@ header nav.nav--active ul {
 }
 @media (max-width: 830px) {
   .title__frontend .codezardi {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 620px) {
+  .title__frontend .codezardi {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 440px) {
+  .title__frontend .codezardi {
     font-size: 3rem;
+  }
+}
+@media (max-width: 320px) {
+  .title__frontend .codezardi {
+    font-size: 2.3rem;
   }
 }
 .title__frontend .codezardi::before {
@@ -215,14 +251,21 @@ header nav.nav--active ul {
   }
 }
 .title__frontend p {
-  font-weight: 200;
+  font-weight: 300;
   text-wrap: inherit;
   text-align: center;
   max-width: 70ch;
+  padding: 0 2rem;
 }
 @media (max-width: 830px) {
   .title__frontend p {
-    margin-top: 0;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 620px) {
+  .title__frontend {
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -359,7 +402,6 @@ main .experience .sphere {
 main .about__me {
   position: relative;
   width: 100%;
-  color: #fff;
 }
 @media (max-width: 1000px) {
   main .about__me {
@@ -581,27 +623,6 @@ main .about__me .block:nth-child(5) {
     font-size: 0.875rem;
   }
 }
-main .about__me-name {
-  position: relative;
-  height: 885px;
-  display: flex;
-  justify-content: center;
-}
-main .about__me-name .letter {
-  font-weight: bold;
-  color: #d8d8d8;
-  z-index: 2;
-}
-main .about__me-name .letter.augusto {
-  font-size: 18em;
-  position: absolute;
-}
-main .about__me-name .letter.diaz {
-  position: absolute;
-  font-size: 12em;
-  top: 1.5em;
-  transform: translateX(97%);
-}
 main .projects {
   position: relative;
   width: 100%;
@@ -679,30 +700,20 @@ main .skills .subtitle__section {
 
 footer {
   position: absolute;
-  bottom: 6rem;
+  bottom: 42px;
   left: 50%;
   transform: translate(-50%);
   z-index: 3;
-  display: grid;
-  place-items: center;
-}
-footer section {
-  background: #8064F1;
-  border-radius: 4px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  text-wrap: nowrap;
+  background: rgba(5, 3, 14, 0.0784313725);
+  backdrop-filter: blur(10px);
 }
-footer section a {
-  display: inline-block;
-  color: #fcfcff;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 5px;
-}
-footer span {
+footer * {
   color: #adadad;
-  margin-top: 1rem;
 }
 
 .tags {

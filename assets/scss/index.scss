@@ -24,7 +24,6 @@ li {
 
 // * Variables
 $color-primary: #080516;
-// $color-primary: #111826;
 $color-secondary: #8064F1;
 $background-header: #fcfcff;
 $color-text: #d8d8d8;
@@ -65,9 +64,6 @@ header {
     position: relative;
     min-height: 100vh;
     background: radial-gradient(circle at -53% 52%, #1b084a 0%, #080516 78%, #1b084a 431%);
-    // background: url('../img/vale.svg') no-repeat;
-    // background-color: $background-header;
-    // background-size: cover;
 
     &::before {
         content: "";
@@ -92,56 +88,45 @@ header {
         font-weight: normal;
         z-index: 5;
 
-        @media (max-width: 590px) {
-            display: none;
-        }
-
-        .logo {
-            padding: 1em;
+        @media (max-width: 440px) {
+            font-size: .6rem;
         }
 
         ul {
             display: flex;
             border-radius: 100px;
             transition: $trs;
-            @keyframes bg-spin {
-                to {
-                    --border-angle: 1turn;
-                }
-            }
-
-            @property --border-angle {
-                syntax: "<angle>";
-                inherits: true;
-                initial-value: 0turn;
-            }
-
-
             li {
                 padding: 1em;
+                
+                @media (max-width: 440px) {
+                    padding: .3rem;
+                }
 
                 a {
                     display: block;
                     color: $color-title;
                     transition: all 200ms ease-in-out;
                     font-weight: 300;
-                    
+
                     &.a--active {
                         color: $color-pink;
                         font-weight: 600;
                     }
 
                     &:hover {
-                        transform: translateY(3px);
+                        color: $color-pink;
+                        font-weight: 600;
                     }
                 }
             }
         }
+
         &.nav--active {
             ul {
                 background: #080516ad;
                 backdrop-filter: blur(10px);
-            }   
+            }
         }
     }
 }
@@ -195,29 +180,43 @@ header {
 .title__frontend {
     position: absolute;
     left: 0;
-    // bottom: 450px;
-    top: 27vh;
+    top: 22vh;
     z-index: 4;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     .btns-social {
         display: flex;
         gap: 1rem;
-        margin: 1rem;
+
         a {
-            color: $color-pink;
+            color: #ffeef4;
             font-size: 0.875rem;
-            text-transform: uppercase;
-            border: 1px solid $color-pink;
-            border-radius: 4px;
+            border: 1px solid #ff307752;
+            border-radius: 100px;
             display: block;
-            padding: 10px;
-            font-weight: 600;
+            padding: 5px 10px;
+            font-weight: 400;
+            backdrop-filter: blur(10px);
+            background: #b8b3b724;
+            text-align: center;
+
+            &:nth-child(1) {
+                background: $color-pink;
+                color: $background-header;
+            }
+        }
+        @media (max-width: 320px) {
+            flex-direction: column;
+            a {
+                width: 200px;
+            }
         }
     }
+
     .frontend__developer {
         font-size: 2rem;
         font-weight: 200;
@@ -226,19 +225,41 @@ header {
         letter-spacing: 10px;
         text-align: center;
         margin-top: -31px;
+
+        @media (max-width: 830px) {
+            margin-top: -18px;
+            font-size: 1.5rem;
+        }
+        @media (max-width: 620px) {
+            font-size: 1rem;
+        }
+        @media (max-width: 320px) {
+            margin-top: 0px;
+            font-size: 1rem;
+        }
+        
     }
 
     .codezardi {
         position: relative;
         text-align: center;
-        // width: 100%;
         text-transform: uppercase;
         font-size: 7rem;
         color: $color-title;
 
         @media (max-width: 830px) {
+            font-size: 5rem;
+        }
+        @media (max-width: 620px) {
+            font-size: 4rem;
+        }
+        @media (max-width: 440px) {
             font-size: 3rem;
         }
+        @media (max-width: 320px) {
+            font-size: 2.3rem;
+        }
+        
 
         &::before {
             content: "";
@@ -249,6 +270,7 @@ header {
             left: 0;
             background: $color-title;
             display: none;
+
             @media (max-width: 830px) {
                 background: #0000;
             }
@@ -256,15 +278,20 @@ header {
     }
 
     p {
-        font-weight: 200;
+        font-weight: 300;
         text-wrap: inherit;
         text-align: center;
         max-width: 70ch;
-        // margin-top: -23px;
-
+        padding: 0 2rem;
         @media (max-width: 830px) {
-            margin-top: 0;
+            margin-top: 10px;
         }
+
+    }
+
+    @media (max-width: 620px) {
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
@@ -337,7 +364,6 @@ p {
 }
 
 .base__box {
-    // position: absolute;
     top: 256px;
     left: 0;
     width: 100%;
@@ -358,12 +384,10 @@ p {
 
 
 main {
-    // background: red;
     position: absolute;
     height: 100%;
     top: 100vh;
     width: 100%;
-    // padding: 0 4rem;
 
     .main {
         position: relative;
@@ -373,8 +397,6 @@ main {
     }
 
     .content {
-        // border-radius: 20px 20px 0 0;
-        // background: $color-primary;
         background-image: radial-gradient(circle at 43% 34%, #1b084a 0%, $color-primary 30%);
         position: absolute;
         top: 0;
@@ -383,12 +405,6 @@ main {
         height: auto;
         width: 100%;
 
-        // .radial__bg {
-        //     position: absolute;
-        //     width: 50%;
-        //     height: 50%;
-        //     background: red;
-        // }
         .rock {
             position: absolute;
             top: 0;
@@ -442,25 +458,12 @@ main {
             max-width: 1080px;
         }
 
-        // display: flex;
-        // justify-content: start;
-        // @extend .container;
-        // background: linear-gradient(to top, $color-primary, #0000);
-        // max-width: 750px;
-        // margin: 0 auto;
-        color: #fff;
-        // text-align: center;
-        // box-shadow: 108px 0 125px -165px #8064F1, -108px 0 125px -165px #8064F1;
-
-
         .block {
             position: absolute;
             display: none;
             max-width: 30ch;
             font-size: 0.875rem;
             transition: $trs;
-
-
 
             &:nth-child(1) {
                 display: flex;
@@ -581,9 +584,7 @@ main {
             }
 
             @media (max-width: 1000px) {
-                // @include position($top: 1%, $left: 10%)
                 position: initial;
-                // background: red;
                 max-width: 100ch !important;
 
                 &--container {
@@ -598,109 +599,17 @@ main {
             @media (max-width: 720px) {
                 font-size: 0.875rem;
             }
-
-
-
-
         }
-
-
-        &-name {
-            position: relative;
-            height: 885px;
-            display: flex;
-            justify-content: center;
-
-            .letter {
-                font-weight: bold;
-                color: $color-text;
-                z-index: 2;
-
-                &.augusto {
-                    font-size: 18em;
-                    position: absolute;
-                }
-
-                &.diaz {
-                    position: absolute;
-                    font-size: 12em;
-                    top: 1.5em;
-                    transform: translateX(97%);
-                }
-            }
-
-            &::before {
-                // content: "";
-                // position: absolute;
-                // top: 242px;
-                // width: 100%;
-                // height: 664px;
-                // background: url('../img/base__box.svg') no-repeat;
-                // background-size: 100%;
-            }
-        }
-
-
     }
 
     .projects {
-        // background-color: $color-primary;
-        // opacity: 0.8;
-        // background-image:  linear-gradient(#444cf7 2px, transparent 2px), linear-gradient(to right, #444cf7 2px, #111824 2px);
-        // background-size: 40px 40px;
-        // position: relative;
         @extend .container;
-        // background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%);
-
         position: relative;
-        // margin-top: rem;
-        // margin-top: 5rem;
-        // background: red;
         width: 100%;
         height: 100%;
-        // padding-top: 13em;
         margin-top: 10vh;
-
-        // .main__projects {
-        //     position: relative;
-        //     border-radius: 20px;
-        //     padding: 2rem;
-        //     background: url('https://i.pinimg.com/564x/ad/6b/b2/ad6bb2642b42356b4d57dedcced58083.jpg') no-repeat;
-        //     background-size: cover;
-        //     height: 890px;
-        //     box-shadow: 0 125px 160px -149px #8968E7;
-
-        //     &::before {
-        //         content: "";
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 100%;
-        //         height: 100%;
-        //         border-radius: 20px;
-        //         background: linear-gradient(228deg, rgb(18 11 59 / 84%), $color-primary);
-        //     }
-
-        //     &-content {
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 100%;
-        //         height: 100%;
-        //         border-radius: 20px;
-        //         padding: 15rem 5rem 5rem 5rem;
-        //         display: flex;
-        //         flex-direction: column;
-        //         justify-content: space-between;
-
-        //         h2 {
-        //             margin-bottom: 2rem;
-        //         }
-        //     }
-        // }
         &__cards {
             display: flex;
-            // flex-wrap: wrap;
             gap: 2rem;
 
             @media (max-width: 990px) {
@@ -714,7 +623,6 @@ main {
             border-radius: 10px;
             border: 1px solid #311d55;
             padding: 1rem;
-            // display: flex;
             gap: 1rem;
             max-width: 50vw;
             transition: $trs;
@@ -788,32 +696,20 @@ main {
 
 footer {
     position: absolute;
-    bottom: 6rem;
+    bottom: 42px;
     left: 50%;
     transform: translate(-50%);
     z-index: 3;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-wrap: nowrap;
+    background: #05030e14;
+    backdrop-filter: blur(10px);
 
-    section {
-        background: $color-secondary;
-        border-radius: 4px;
-        display: flex;
-        gap: 1rem;
-        padding: 1rem;
-
-        a {
-            display: inline-block;
-            color: $background-header;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 5px;
-        }
-    }
-
-    span {
+    * {
         color: #adadad;
-        margin-top: 1rem;
     }
 
 }
