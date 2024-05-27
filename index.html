@@ -18,28 +18,20 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
-                logo
-            </div>
             <ul>
                 <li>
-                    <a href="#">
-                        inicio
+                    <a href="#experiencia" class="hola">
+                        experiencia
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#proyectos">
+                        proyectos
+                    </a>
+                </li>
+                <li>
+                    <a href="#sobre-mi">
                         sobre mi
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        portafolio
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        blog
                     </a>
                 </li>
                 <li>
@@ -50,17 +42,21 @@
             </ul>
         </nav>
         <div class="title__frontend">
-            <h1 class="frontend__developer">Fullstack developer</h1>
             <h2 class="codezardi">codezardi</h2>
+            <h1 class="frontend__developer">Fullstack developer</h1>
             <p>¡Puedo convertir cualquier diseño que imagines en una maqueta funcional y visualmente atractiva!</p>
+            <!-- <div class="btns-social">
+                <a href="#">github</a>
+                <a href="#">linkedin</a>
+            </div> -->
         </div>
         <spline-viewer class="planet__sphere" url="https://prod.spline.design/o0dcO-XK44W1SZ3d/scene.splinecode"></spline-viewer>
     </header>
-    <main>
+    <main class="content">
         <section class="main">
             <article class="content">
                 <!-- Experience -->
-                <section class="experience">
+                <section class="experience" id="experiencia">
                     <img src="./assets/img/1.png" alt="Rock" class="rock">
                     <div class="radial__bg"></div>
 
@@ -82,7 +78,7 @@
                             ayudó a profundizar y afirmar los conocimientos en HTML, CSS, SCSS y JavaScript.</p>
                     </article>
                     <article class="timeline">
-                        <time>Octubre 2023 - Actualidad</time>
+                        <time>Octubre 2023</time>
                         <div class="subtitle__section">Fullstack Developer</div>
                         <p>Como Fullstack se desarrolló un clon de <strong>Codepen</strong> usando PHP Puro bajo una
                             arquitectura MVC con el gestor de base de datos MySql. Actualmente sigo aprendiendo PHP
@@ -90,7 +86,7 @@
                     </article>
                 </section>
                 <!-- Projects -->
-                <section class="projects">
+                <section class="projects" id="proyectos">
                     <h2 class="title__section">Proyectos</h2>
 
                     <div class="projects__cards">
@@ -104,7 +100,9 @@
                                 <span class="tags-tag tags-tag--small">css</span>
                                 <span class="tags-tag tags-tag--small">javascript</span>
                             </div>
-                            <img src="./assets/img/project1.jpg" alt="UI Kit Loen" class="projects__img">
+                            <div class="project__main-img">
+                                <img src="./assets/img/project1.jpg" alt="UI Kit Loen" class="projects__img">
+                            </div>
                         </a>
                         <a href="#" target="_blank" class="projects__card">
                             <i class="material-icons-outlined">arrow_outward</i>
@@ -121,13 +119,8 @@
                     </div>
                 </section>
                 <!-- About me -->
-                <section class="about__me">
+                <section class="about__me" id="sobre-mi">
                     <h2 class="title__section title__section--sp">Sobre mi</h2>
-
-                    <!-- <img src="./assets/img/about_me.png" alt="AboutMe" class="img__aboutme"> -->
-
-
-
                     <article class="about__me relative__aboutme">
                         <div class="block block--container">
                             <h4 class="subtitle__section">Augusto Díaz</h4>
@@ -283,7 +276,7 @@
                     </article>
                     <section class="skills">
                         <h6 class="subtitle__section">Teconologías y Herramientas</h6>
-                        <div class="scroll" style="--time:20s">
+                        <div class="scroll" style="--time:50s">
                             <div>
                                 <span>HTML</span>
                                 <span>CSS</span>
@@ -331,31 +324,7 @@
                                 <span>codepen</span>
                             </div>
                         </div>
-                        <div class="scroll" style="--time:25s">
-                            <div>
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Figma</span>
-                                <span>scss</span>
-                                <span>vscode</span>
-                                <span>Node JS</span>
-                                <span>github</span>
-                                <span>codepen</span>
-                            </div>
-                            <div>
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Figma</span>
-                                <span>scss</span>
-                                <span>vscode</span>
-                                <span>Node JS</span>
-                                <span>github</span>
-                                <span>codepen</span>
-                            </div>
-                        </div>
-                        <div class="scroll" style="--time:40s">
+                        <div class="scroll" style="--time:70s">
                             <div>
                                 <span>HTML</span>
                                 <span>CSS</span>
@@ -380,17 +349,20 @@
                             </div>
                         </div>
                     </section>
-                    <img src="assets/img/base.svg" alt="BaseBox" class="base__box">
-                    <img src="assets/img/rocks.png" alt="Rocks" class="rocks">
+                    <img src="assets/img/base.svg" alt="BaseBox" class="base__box" alt="BaseBox">
+                    <img src="assets/img/rocks.png" alt="Rocks" class="rocks" alt="Rocks">
                 </section>
-
+                <footer>
+                    <section>
+                        <a href="#">correo</a>
+                        <a href="#" target="_blank">github</a>
+                        <a href="#">linkedin</a>
+                    </section>
+                    <span>© 2024 Codezardi</span>
+                </footer>
             </article>
         </section>
     </main>
-
-
-
-    <img src="assets/img/cursor.svg" class="cursor" alt="Cursor">
     <script src="./assets/js/index.js"></script>
 </body>
 

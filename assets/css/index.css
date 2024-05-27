@@ -21,6 +21,10 @@ li {
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   font-size: 14px;
@@ -38,7 +42,7 @@ img {
 header {
   position: relative;
   min-height: 100vh;
-  background: #080516;
+  background: radial-gradient(circle at -53% 52%, #1b084a 0%, #080516 78%, #1b084a 431%);
 }
 header::before {
   content: "";
@@ -51,17 +55,16 @@ header::before {
   z-index: 3;
 }
 header nav {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 1rem;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-  padding: 2em 4em;
+  justify-content: center;
+  font-size: 0.875rem;
   text-transform: uppercase;
   font-weight: normal;
-  z-index: 3;
+  z-index: 5;
 }
 @media (max-width: 590px) {
   header nav {
@@ -73,6 +76,20 @@ header nav .logo {
 }
 header nav ul {
   display: flex;
+  border-radius: 100px;
+  transition: all 300ms ease-in-out;
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@property --border-angle {
+  header nav ul {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
 }
 header nav ul li {
   padding: 1em;
@@ -80,10 +97,19 @@ header nav ul li {
 header nav ul li a {
   display: block;
   color: #F1ECFF;
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  font-weight: 300;
+}
+header nav ul li a.a--active {
+  color: #ff3077;
+  font-weight: 600;
 }
 header nav ul li a:hover {
   transform: translateY(3px);
+}
+header nav.nav--active ul {
+  background: rgba(8, 5, 22, 0.6784313725);
+  backdrop-filter: blur(10px);
 }
 
 .container, main .skills, main .projects, main .about__me .title__section, main .experience {
@@ -129,7 +155,7 @@ header nav ul li a:hover {
 .title__frontend {
   position: absolute;
   left: 0;
-  top: 32vh;
+  top: 27vh;
   z-index: 4;
   width: 100%;
   display: flex;
@@ -137,13 +163,29 @@ header nav ul li a:hover {
   justify-content: center;
   flex-direction: column;
 }
+.title__frontend .btns-social {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+.title__frontend .btns-social a {
+  color: #ff3077;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  border: 1px solid #ff3077;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  font-weight: 600;
+}
 .title__frontend .frontend__developer {
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 200;
   text-transform: uppercase;
   color: #d8d8d8;
   letter-spacing: 10px;
   text-align: center;
+  margin-top: -31px;
 }
 .title__frontend .codezardi {
   position: relative;
@@ -165,6 +207,7 @@ header nav ul li a:hover {
   bottom: 30px;
   left: 0;
   background: #F1ECFF;
+  display: none;
 }
 @media (max-width: 830px) {
   .title__frontend .codezardi::before {
@@ -176,7 +219,6 @@ header nav ul li a:hover {
   text-wrap: inherit;
   text-align: center;
   max-width: 70ch;
-  margin-top: -23px;
 }
 @media (max-width: 830px) {
   .title__frontend p {
@@ -340,7 +382,7 @@ main .about__me .block {
   position: absolute;
   display: none;
   max-width: 30ch;
-  font-size: 1.2rem;
+  font-size: 0.875rem;
   transition: all 300ms ease-in-out;
 }
 main .about__me .block:nth-child(1) {
@@ -604,18 +646,19 @@ main .projects__card:hover {
   box-shadow: 0 20px 80px -49px #8064f1, 0 43px 80px -50px #f164c3;
 }
 main .projects__card:hover .projects__img {
-  width: 150% !important;
   object-position: top right;
 }
 main .projects__card:hover i {
   transform: translate(3px, -3px);
   color: #d8d2f4;
 }
+main .projects__card:hover .projects__img {
+  object-fit: contain;
+}
 main .projects__title {
   font-weight: 600;
   color: #F1ECFF;
   font-size: 2rem;
-  margin-bottom: 1rem;
 }
 main .projects__img {
   border-radius: 10px;
@@ -631,6 +674,34 @@ main .skills {
 main .skills .subtitle__section {
   margin-bottom: 2rem;
   text-align: center;
+  margin-top: 1rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 6rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 3;
+  display: grid;
+  place-items: center;
+}
+footer section {
+  background: #8064F1;
+  border-radius: 4px;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+footer section a {
+  display: inline-block;
+  color: #fcfcff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+footer span {
+  color: #adadad;
   margin-top: 1rem;
 }
 
@@ -828,57 +899,6 @@ article.timeline:last-child {
     transform: rotateX(45deg) translateY(-45%) translateX(0%);
   }
 }
-p.text__special {
-  text-wrap: pretty;
-  max-width: 100%;
-  color: rgba(0, 0, 0, 0);
-}
-
-#canvas {
-  position: fixed;
-  top: 0;
-  background: rgb(5, 0, 20);
-  user-select: none;
-  z-index: 1;
-  margin: 0 auto;
-}
-
-#ui-button {
-  position: fixed;
-  left: 50px;
-  bottom: 50px;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.6);
-  padding: 5px 10px;
-  border: solid 2px;
-  border-radius: 6px;
-  outline: none;
-  opacity: 1;
-  transition: transform 0.1s cubic-bezier(0.09, 0.95, 0.14, 1.25), opacity 0.1s cubic-bezier(0.09, 0.95, 0.14, 1.25);
-}
-#ui-button:before {
-  content: attr(data-on);
-}
-#ui-button.off {
-  opacity: 0;
-  transform: translate(-2px, 2px);
-}
-#ui-button.off:before {
-  content: attr(data-off);
-}
-#ui-button:hover {
-  color: rgba(0, 0, 0, 0);
-}
-
-button {
-  font-size: 1em;
-}
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
-  button {
-    font-size: 2em;
-  }
-}
-
 .relative__aboutme {
   position: relative;
   transition: all 300ms ease-in-out;
@@ -896,17 +916,6 @@ button {
   font-size: 1.3rem;
   letter-spacing: 11px;
   opacity: 0;
-}
-.relative__aboutme .experience__aboutme::before {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(#120b2f -87%, transparent);
-  border-radius: 50%;
-  left: 28%;
-  top: 9%;
-  z-index: -1;
 }
 .relative__aboutme .svg__experience {
   width: 100%;
