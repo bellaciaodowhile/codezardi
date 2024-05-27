@@ -267,6 +267,11 @@ header nav.nav--active ul {
     margin-top: 10px;
   }
 }
+@media (max-width: 320px) {
+  .title__frontend p {
+    font-size: 12px;
+  }
+}
 @media (max-width: 620px) {
   .title__frontend {
     top: 50%;
