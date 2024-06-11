@@ -718,7 +718,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  text-wrap: nowrap;
+  flex-wrap: wrap;
   background: rgba(5, 3, 14, 0.0784313725);
   backdrop-filter: blur(10px);
 }
@@ -733,6 +733,7 @@ footer * {
   margin-bottom: 1rem;
   pointer-events: none;
   user-select: none;
+  flex-wrap: wrap;
 }
 .tags-tag {
   padding: 5px 15px;
