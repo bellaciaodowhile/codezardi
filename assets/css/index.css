@@ -724,6 +724,7 @@ footer {
 }
 footer * {
   color: #adadad;
+  text-align: center;
 }
 
 .tags {
