@@ -30,7 +30,7 @@ body {
   position: relative;
   font-size: 14px;
   overflow-x: hidden;
-  background-color: #fcfcff;
+  background: radial-gradient(circle at 43% 34%, #1b084a 0%, #080516 30%);
   background-size: cover;
   max-width: 1820px;
   margin: 0 auto;
@@ -44,6 +44,7 @@ header {
   position: relative;
   min-height: 100vh;
   background: radial-gradient(circle at -53% 52%, #1b084a 0%, #080516 78%, #1b084a 431%);
+  box-shadow: #1f125c 0px 48px 510px 0px;
 }
 header::before {
   content: "";
@@ -385,6 +386,7 @@ main .content {
   z-index: 2;
   height: auto;
   width: 100%;
+  box-shadow: #1f125c 0px 48px 510px 0px;
 }
 main .content .rock {
   position: absolute;
@@ -392,6 +394,7 @@ main .content .rock {
   right: 0;
   mix-blend-mode: color-dodge;
   width: 50vw;
+  max-width: 800px;
 }
 main .content .rock:nth-child(2) {
   left: 0;
