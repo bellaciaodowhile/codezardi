@@ -710,6 +710,27 @@ main .skills .subtitle__section {
   text-align: center;
   margin-top: 1rem;
 }
+main .skills__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+main .skills__items-item {
+  background: #080516;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #d8d8d8;
+  font-weight: 500;
+  row-gap: 8px;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+main .skills__items-item img {
+  max-width: 50px;
+}
 
 footer {
   position: absolute;
