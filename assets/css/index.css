@@ -40,6 +40,10 @@ img {
   pointer-events: none;
 }
 
+video {
+  border-radius: 10px;
+}
+
 header {
   position: relative;
   min-height: 100vh;
@@ -103,6 +107,36 @@ header nav ul li a:hover {
 header nav.nav--active ul {
   background: rgba(8, 5, 22, 0.6784313725);
   backdrop-filter: blur(10px);
+}
+
+.title-coming-soon {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.coming-soon {
+  padding: 7px 20px;
+  border-radius: 100px;
+  border: 1px solid #ff3077;
+  border-style: dashed;
+  display: grid;
+  place-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ff3077;
+  width: fit-content;
+  letter-spacing: 3px;
+}
+
+.play {
+  position: absolute;
+  display: block;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .container, main .skills, main .projects, main .about__me .title__section, main .experience {
@@ -645,6 +679,7 @@ main .projects {
 main .projects__cards {
   display: flex;
   gap: 2rem;
+  margin-top: 2rem;
 }
 @media (max-width: 990px) {
   main .projects__cards {
@@ -661,6 +696,31 @@ main .projects__card {
   max-width: 50vw;
   transition: all 300ms ease-in-out;
   background: linear-gradient(45deg, #11082f, rgba(0, 0, 0, 0));
+  display: block;
+}
+main .projects__card.project--important {
+  max-width: 100%;
+}
+main .projects__card.project--important .projects__description {
+  margin-top: 2rem;
+}
+main .projects__card.project--important .project__main-img {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .projects__card.project--important .project__main-img i {
+  right: inherit;
+  color: white;
+  font-size: 70px;
+  background: #080516;
+  border-radius: 50%;
+  box-shadow: 0px 0px 93px #9C27B0;
+  border: #080516 4px solid;
+}
+main .projects__card.project--important .project__main-img:hover i {
+  transform: scale(1.1);
 }
 @media (max-width: 990px) {
   main .projects__card {
@@ -675,24 +735,27 @@ main .projects__card i {
   transition-delay: 100ms;
   font-size: 1.2rem;
 }
-main .projects__card:hover {
+main .projects__card:not(.project--important):hover {
   transform: translateY(-3px);
   box-shadow: 0 20px 80px -49px #8064f1, 0 43px 80px -50px #f164c3;
 }
-main .projects__card:hover .projects__img {
+main .projects__card:not(.project--important):hover .projects__img {
   object-position: top right;
 }
-main .projects__card:hover i {
+main .projects__card:not(.project--important):hover i:not(.play) {
   transform: translate(3px, -3px);
   color: #d8d2f4;
 }
-main .projects__card:hover .projects__img {
+main .projects__card:not(.project--important):hover .projects__img {
   object-fit: contain;
 }
 main .projects__title {
   font-weight: 600;
   color: #F1ECFF;
   font-size: 2rem;
+}
+main .projects__description {
+  max-width: 100%;
 }
 main .projects__img {
   border-radius: 10px;

@@ -9,6 +9,7 @@
     <link rel="canonical" href="https://codezardi.vercel.app/">
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&icon_names=play_arrow" />
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -115,55 +116,77 @@
                 </section>
                 <section class="projects" id="proyectos">
                     <h2 class="title__section">Proyectos</h2>
-
-                    <div class="projects__cards">
-                        <a href="https://reactions-linkedin.vercel.app/" aria-label="Reacciones LinkedIn" target="_blank" class="projects__card">
-                            <i class="material-icons-outlined">arrow_outward</i>
-                            <h3 class="projects__title">Reacciones de LinkedIn</h3>
-                            <p class="projects__description">Este es un proyecto el cual me llamó mucho la atención. Y por ende me decidí a crearlo, allí podemos ver las animaciones al reaccionar según su gusto. ¡Échale un vistazo!</p>
-                            <div class="tags">
-                                <span class="tags-tag tags-tag--small">html</span>
-                                <span class="tags-tag tags-tag--small">css</span>
-                                <span class="tags-tag tags-tag--small">scss</span>
-                                <span class="tags-tag tags-tag--small">javascript</span>
-                            </div>
-                            <div class="project__main-img">
-                                <img src="./assets/img/reactions-linkedin.webp" alt="Reactions LinkedIn" class="projects__img"  width="100%" height="100%" loading="lazy">
-                            </div>
-                        </a>
-                        <a href="https://pastalasirena.com/" aria-label="Pastas La Sirena" target="_blank" class="projects__card">
-                            <i class="material-icons-outlined">arrow_outward</i>
-                            <h3 class="projects__title">Pastas la Sirena</h3>
-                            <p class="projects__description">Landing Page: Descubre una empresa innovadora y creativa, comprometida con la excelencia en el proceso de producción.</p>
-                            <div class="tags">
-                                <span class="tags-tag tags-tag--small">html</span>
-                                <span class="tags-tag tags-tag--small">css</span>
-                                <span class="tags-tag tags-tag--small">scss</span>
-                                <span class="tags-tag tags-tag--small">javascript</span>
-                            </div>
-                            <div class="project__main-img">
-                                <img src="./assets/img/sirena.webp" alt="Pastas La Sirena" class="projects__img"  width="100%" height="100%" loading="lazy">
-                            </div>
-                        </a>
-                        <a href="https://github.com/bellaciaodowhile/mvc-login-roles" aria-label="Codepen PHP - MVC" target="_blank" class="projects__card">
-                            <i class="material-icons-outlined">arrow_outward</i>
-                            <h3 class="projects__title">Clon de Codepen</h3>
-                            <p class="projects__description">Te permite crear los componentes según el perfil del usuario y guardarlos por proyectos, categorías y subcategorías para su posterior visualización. Acá tienes el link para que puedas mirar el código.</p>
-                            <div class="tags">
-                                <span class="tags-tag tags-tag--small">html</span>
-                                <span class="tags-tag tags-tag--small">css</span>
-                                <span class="tags-tag tags-tag--small">scss</span>
-                                <span class="tags-tag tags-tag--small">javascript</span>
-                                <span class="tags-tag tags-tag--small">php</span>
-                                <span class="tags-tag tags-tag--small">mysql</span>
-                                <span class="tags-tag tags-tag--small">monaco editor</span>
-                            </div>
-                            <div class="project__main-img">
-                                <img src="./assets/img/components.png" alt="Components" class="projects__img"  width="100%" height="100%" loading="lazy">
-                            </div>
-                        </a>
-                        
+                    <div class="projects__card project--important">
+                        <div class="title-coming-soon">
+                            <h3 class="projects__title">Listas de predicaciones</h3>
+                            <span class="coming-soon">coming soon</span>
+                        </div>
+                        <p class="projects__description">Este proyecto personal se está realizando para optimizar la creación de las listas de predicación de una iglesia, tomando en cuenta que puede ser usado por otras iglesias que tengan el mismo formato. Normalmente las personas que realizan la transcripción son personas mayores y para evitar tener que buscar manualmente los dias de servicio se está desarrollando esta app.</p>
+                        <div class="tags">
+                            <span class="tags-tag tags-tag--small">vite</span>
+                            <span class="tags-tag tags-tag--small">reactjs</span>
+                            <span class="tags-tag tags-tag--small">tailwindcss</span>
+                            <span class="tags-tag tags-tag--small">supabase</span>
+                            <span class="tags-tag tags-tag--small">heroui</span>
+                        </div>
+                        <div class="project__main-img">
+                            <i class="material-icons play">play_arrow</i>
+                            <video src="./assets/video/preachers-demo.webm" loop></video>
+                        </div>
                     </div>
+                    <ul class="projects__cards">
+                        <li class="projects__card">
+                            <a href="https://reactions-linkedin.vercel.app/" aria-label="Reacciones LinkedIn" target="_blank">
+                                <i class="material-icons-outlined">arrow_outward</i>
+                                <h3 class="projects__title">Reacciones de LinkedIn</h3>
+                                <p class="projects__description">Este es un proyecto el cual me llamó mucho la atención. Y por ende me decidí a crearlo, allí podemos ver las animaciones al reaccionar según su gusto. ¡Échale un vistazo!</p>
+                                <div class="tags">
+                                    <span class="tags-tag tags-tag--small">html</span>
+                                    <span class="tags-tag tags-tag--small">css</span>
+                                    <span class="tags-tag tags-tag--small">scss</span>
+                                    <span class="tags-tag tags-tag--small">javascript</span>
+                                </div>
+                                <div class="project__main-img">
+                                    <img src="./assets/img/reactions-linkedin.webp" alt="Reactions LinkedIn" class="projects__img"  width="100%" height="100%" loading="lazy">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="projects__card">
+                            <a href="https://pastalasirena.com/" aria-label="Pastas La Sirena" target="_blank">
+                                <i class="material-icons-outlined">arrow_outward</i>
+                                <h3 class="projects__title">Pastas la Sirena</h3>
+                                <p class="projects__description">Landing Page: Descubre una empresa innovadora y creativa, comprometida con la excelencia en el proceso de producción.</p>
+                                <div class="tags">
+                                    <span class="tags-tag tags-tag--small">html</span>
+                                    <span class="tags-tag tags-tag--small">css</span>
+                                    <span class="tags-tag tags-tag--small">scss</span>
+                                    <span class="tags-tag tags-tag--small">javascript</span>
+                                </div>
+                                <div class="project__main-img">
+                                    <img src="./assets/img/sirena.webp" alt="Pastas La Sirena" class="projects__img"  width="100%" height="100%" loading="lazy">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="projects__card">
+                            <a href="https://github.com/bellaciaodowhile/mvc-login-roles" aria-label="Codepen PHP - MVC" target="_blank" >
+                                <i class="material-icons-outlined">arrow_outward</i>
+                                <h3 class="projects__title">Clon de Codepen</h3>
+                                <p class="projects__description">Te permite crear los componentes según el perfil del usuario y guardarlos por proyectos, categorías y subcategorías para su posterior visualización. Acá tienes el link para que puedas mirar el código.</p>
+                                <div class="tags">
+                                    <span class="tags-tag tags-tag--small">html</span>
+                                    <span class="tags-tag tags-tag--small">css</span>
+                                    <span class="tags-tag tags-tag--small">scss</span>
+                                    <span class="tags-tag tags-tag--small">javascript</span>
+                                    <span class="tags-tag tags-tag--small">php</span>
+                                    <span class="tags-tag tags-tag--small">mysql</span>
+                                    <span class="tags-tag tags-tag--small">monaco editor</span>
+                                </div>
+                                <div class="project__main-img">
+                                    <img src="./assets/img/components.png" alt="Components" class="projects__img"  width="100%" height="100%" loading="lazy">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </section>
                 <section class="about__me" id="sobre-mi">
                     <h2 class="title__section title__section--sp">Sobre mi</h2>

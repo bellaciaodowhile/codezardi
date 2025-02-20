@@ -62,6 +62,9 @@ body {
 img {
     pointer-events: none;
 }
+video {
+    border-radius: 10px;
+}
 
 header {
     position: relative;
@@ -135,9 +138,33 @@ header {
     }
 }
 
-
-
 // * Helpers
+.title-coming-soon {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.coming-soon {
+    padding: 7px 20px;
+    border-radius: 100px;
+    border: 1px solid $color-pink;
+    border-style: dashed;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color-pink;
+    width: fit-content;
+    letter-spacing: 3px;
+}
+.play {
+    position: absolute;
+    display: block;
+}
+.hidden {
+    opacity: 0;
+}
 .container {
     padding: 0 7rem;
 
@@ -623,7 +650,7 @@ main {
         &__cards {
             display: flex;
             gap: 2rem;
-
+            margin-top: 2rem;
             @media (max-width: 990px) {
                 flex-direction: column;
             }
@@ -639,6 +666,31 @@ main {
             max-width: 50vw;
             transition: $trs;
             background: linear-gradient(45deg, #11082f, #0000);
+            display: block;
+            &.project--important {
+                max-width: 100%;
+                .projects__description {
+                    margin-top: 2rem;
+                }
+                .project__main-img {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    i {
+                        right: inherit;
+                        color: white;
+                        font-size: 70px;
+                        background: $color-primary;
+                        border-radius: 50%;
+                        box-shadow: 0px 0px 93px #9C27B0;
+                        border: $color-primary 4px solid;
+                    }
+                    &:hover {
+                        i { transform: scale(1.1); }
+                    }
+                }
+            }
 
             @media (max-width: 990px) {
                 max-width: 100vw;
@@ -653,7 +705,7 @@ main {
                 font-size: 1.2rem;
             }
 
-            &:hover {
+            &:not(.project--important):hover {
                 transform: translateY(-3px);
                 box-shadow: 0 20px 80px -49px #8064f1, 0 43px 80px -50px #f164c3;
 
@@ -661,7 +713,7 @@ main {
                     object-position: top right;
                 }
 
-                i {
+                i:not(.play) {
                     transform: translate(3px, -3px);
                     color: #d8d2f4;
                 }
@@ -681,7 +733,9 @@ main {
             // margin-bottom: 1rem;
         }
 
-        &__description {}
+        &__description {
+            max-width: 100%;
+        }
 
         &__img {
             border-radius: 10px;

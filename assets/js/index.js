@@ -41,4 +41,20 @@ function scrollItems() {
         }
     }
 }
-scrollItems()
+scrollItems();
+
+const projectImportant = document.querySelector('.project--important .project__main-img');
+const play = document.querySelector('.play');
+const video = document.querySelector('video');
+projectImportant.onclick = (e) => {
+    e.preventDefault();
+    if (video.paused) {
+        video.play();
+        video.controls = true;
+        play.classList.add('hidden');
+    } else {
+        video.pause();
+        video.controls = false;
+        play.classList.remove('hidden');
+    }
+}
