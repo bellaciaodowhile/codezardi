@@ -677,13 +677,14 @@ main .projects {
   margin-top: 10vh;
 }
 main .projects__cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
 @media (max-width: 990px) {
   main .projects__cards {
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 main .projects__card {

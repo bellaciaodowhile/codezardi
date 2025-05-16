@@ -648,11 +648,12 @@ main {
         height: 100%;
         margin-top: 10vh;
         &__cards {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-top: 2rem;
             @media (max-width: 990px) {
-                flex-direction: column;
+                grid-template-columns: repeat(1, 1fr);
             }
         }
 
