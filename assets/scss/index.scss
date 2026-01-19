@@ -514,6 +514,7 @@ main {
 
                 top: 1px;
                 left: 23%;
+                width: min(30ch, 90vw);
 
                 @media (max-width: 1820px) {
                     @include position($top: 1%, $left: 20%)
@@ -533,6 +534,7 @@ main {
                 display: flex;
                 top: 44%;
                 right: 9%;
+                width: min(30ch, 90vw);
 
                 @media (max-width: 1820px) {
                     @include position($top: 44%, $right: 7%)
@@ -552,7 +554,7 @@ main {
 
                 @media (max-width: 1150px) {
                     @include position($top: 78%, $right: 5%);
-                    max-width: 25ch;
+                    width: min(25ch, 90vw);
                 }
             }
 
@@ -560,6 +562,7 @@ main {
                 display: flex;
                 top: 44%;
                 left: 20%;
+                width: min(30ch, 90vw);
 
                 @media (max-width: 1616px) {
                     @include position($top: 44%, $left: 13%)
@@ -583,6 +586,7 @@ main {
                 display: flex;
                 top: 79%;
                 left: 31%;
+                width: min(30ch, 90vw);
 
                 @media (max-width: 1616px) {
                     @include position($top: 79%, $left: 22%)
